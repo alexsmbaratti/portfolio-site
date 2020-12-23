@@ -1,3 +1,18 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= message %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css'>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+<section class="hero is-medium is-danger is-bold is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title is-1"><%= message %></h1>
+            <h2 class="subtitle"><%= error.status %></h2>
+        </div>
+    </div>
+</section>
+</body>
