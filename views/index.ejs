@@ -138,22 +138,22 @@
         <h1 class="title">Software Projects</h1>
         <div class="columns">
             <% softwareProjects.forEach(function(project) { %>
-            <div class="column">
-                <a href="<%= project['link'] %>">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-1by1">
-                                <img src="<%= project['img'].src %>" alt="<%= project['img'].alt %>">
-                            </figure>
+                <div class="column">
+                    <a href="<%= project['link'] %>">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-1by1">
+                                    <img src="<%= project['img'].src %>" alt="<%= project['img'].alt %>">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title">
+                                    <%= project['title'] %>
+                                </p>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <p class="title">
-                                <%= project['title'] %>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
             <% }); %>
         </div>
     </div>
@@ -188,106 +188,33 @@
 <section class="section">
     <div class="container has-text-centered">
         <h1 class="title">Other Links</h1>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column is-four-fifths">
-                                <a href="https://corpblog.viasat.com/viasat-virtual-interns-2/">
-                                    <p class="title has-text-left">
-                                        Online s’mores and more: Returning 2020 interns find a changed world
+        <% links.forEach(function(link) { %>
+            <div class="columns">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="columns">
+                                <div class="column is-four-fifths">
+                                    <a href="<%= link['link'] %>">
+                                        <p class="title has-text-left">
+                                            <%= link['title'] %>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <p class="subtitle has-text-right">
+                                        <%= link['date'] %>
                                     </p>
-                                </a>
+                                </div>
                             </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    August 14, 2020
-                                </p>
-                            </div>
+                            <p class="subtitle has-text-left">
+                                <%= link['publisher'] %>
+                            </p>
                         </div>
-                        <p class="subtitle has-text-left">
-                            Inside Viasat
-                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column is-four-fifths">
-                                <a href="https://engineering.asu.edu/new-study-abroad/alexander-baratti/">
-                                    <p class="title has-text-left">
-                                        Study Abroad Reflection
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    June 30, 2020
-                                </p>
-                            </div>
-                        </div>
-                        <p class="subtitle has-text-left">
-                            Ira A. Fulton Schools of Engineering @ ASU
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column is-four-fifths">
-                                <a href="https://carlsbad.org/Career-academies-offer-pathway-to-the-real-world/">
-                                    <p class="title has-text-left">
-                                        Career academies offer pathway to the ‘real world’
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    March 1, 2015
-                                </p>
-                            </div>
-                        </div>
-                        <p class="subtitle has-text-left">
-                            Carlsbad Chamber of Commerce
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column is-four-fifths">
-                                <a href="https://www.sandiegouniontribune.com/sdut-carlsbad-wiz-kids-win-big-2011nov02-story.html">
-                                    <p class="title has-text-left">
-                                        Wiz kids win big
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    November 2, 2011
-                                </p>
-                            </div>
-                        </div>
-                        <p class="subtitle has-text-left">
-                            The San Diego Union Tribune
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <% }); %>
     </div>
 </section>
 </body>

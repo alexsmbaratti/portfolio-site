@@ -58,5 +58,31 @@
         "alt": "Robin Player 2 amiibo"
       }
     }
+  ],
+  "links": [
+    {
+      "title": "Online s’mores and more: Returning 2020 interns find a changed world",
+      "date": "August 14, 2020",
+      "link": "https://corpblog.viasat.com/viasat-virtual-interns-2/",
+      "publisher": "Inside Viasat"
+    },
+    {
+      "title": "Study Abroad Reflection",
+      "date": "June 30, 2020",
+      "link": "https://engineering.asu.edu/new-study-abroad/alexander-baratti/",
+      "publisher": "Ira A. Fulton Schools of Engineering @ ASU"
+    },
+    {
+      "title": "Career academies offer pathway to the 'real world'",
+      "date": "March 1, 2015",
+      "link": "https://carlsbad.org/Career-academies-offer-pathway-to-the-real-world/",
+      "publisher": "Carlsbad Chamber of Commerce"
+    },
+    {
+      "title": "Wiz kids win big",
+      "date": "November 2, 2011",
+      "link": "https://www.sandiegouniontribune.com/sdut-carlsbad-wiz-kids-win-big-2011nov02-story.html",
+      "publisher": "The San Diego Union Tribune"
+    }
   ]
 }
