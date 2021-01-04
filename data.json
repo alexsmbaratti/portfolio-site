@@ -1,4 +1,25 @@
 {
+  "experience": [
+    [
+      {
+        "employer": "Arizona State University UASP",
+        "date": "August 2018 - Present",
+        "title": "Subject Area Tutor"
+      }
+    ],
+    [
+      {
+        "employer": "Viasat",
+        "date": "May 2019 - August 2019",
+        "title": "IT Software Engineering Intern"
+      },
+      {
+        "employer": "Viasat",
+        "date": "May 2020 - August 2020",
+        "title": "IT Software Engineering Intern"
+      }
+    ]
+  ],
   "software-projects": [
     {
       "title": "RosalinaBot",

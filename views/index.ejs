@@ -37,73 +37,33 @@
 <section class="section">
     <div class="container">
         <h1 class="title has-text-centered">Experience</h1>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column">
-                                <p class="title has-text-left">
-                                    Arizona State University UASP
-                                </p>
-                            </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    August 2018 - Present
-                                </p>
-                            </div>
-                        </div>
-                        <p class="subtitle">
-                            Subject Area Tutor
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column">
-                                <p class="title has-text-left">
-                                    Viasat
-                                </p>
-                            </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    May 2019 - August 2019
+        <% experience.forEach(function(row) { %>
+            <div class="columns">
+                <% row.forEach(function(job) { %>
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <p class="title has-text-left">
+                                            <%= job['title']%>
+                                        </p>
+                                    </div>
+                                    <div class="column">
+                                        <p class="subtitle has-text-right">
+                                            <%= job['date']%>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="subtitle">
+                                    <%= job['employer']%>
                                 </p>
                             </div>
                         </div>
-                        <p class="subtitle">
-                            IT Software Engineering Intern
-                        </p>
                     </div>
-                </div>
+                <% }) %>
             </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column">
-                                <p class="title has-text-left">
-                                    Viasat
-                                </p>
-                            </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    May 2020 - August 2020
-                                </p>
-                            </div>
-                        </div>
-                        <p class="subtitle">
-                            IT Software Engineering Intern
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <% }) %>
     </div>
 </section>
 
