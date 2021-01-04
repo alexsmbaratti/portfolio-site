@@ -137,48 +137,22 @@
     <div class="container has-text-centered">
         <h1 class="title">Software Projects</h1>
         <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-1by1">
-                            <img src="/images/rosalina-bot.jpg" alt="RosalinaBot Icon">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title">
-                            RosalinaBot
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-1by1">
-                            <img src="/images/akihabara-simulation.jpg" alt="Unity Simulation of Akihabara">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title">
-                            Akihabara Simulation
-                        </p>
+            <% softwareProjects.forEach(function(project) { %>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-1by1">
+                                <img src="<%= project['img'].src %>" alt="<%= project['img'].alt %>">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title">
+                                <%= project['title'] %>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-1by1">
-                            <img src="/images/happy-key.jpg" alt="Happy Key Logo">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title">
-                            Happy Key
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <% }); %>
         </div>
     </div>
 </section>
@@ -187,48 +161,6 @@
     <div class="container has-text-centered">
         <h1 class="title">DIY Projects</h1>
         <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-1by1">
-                            <img src="/images/starbits-coffee.jpg" alt="Starbits Coffee Logo">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title">
-                            Starbits Coffee Mug
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-1by1">
-                            <img src="/images/amiibo-display.jpg" alt="amiibo Display">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title">
-                            amiibo Display
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-1by1">
-                            <img src="/images/robin-player-2.jpg" alt="Robin Player 2 amiibo">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title">
-                            Robin Player 2 amiibo
-                        </p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
