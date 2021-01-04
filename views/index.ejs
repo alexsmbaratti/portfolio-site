@@ -138,7 +138,8 @@
         <h1 class="title">Software Projects</h1>
         <div class="columns">
             <% softwareProjects.forEach(function(project) { %>
-                <div class="column">
+            <div class="column">
+                <a href="<%= project['link'] %>">
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-1by1">
@@ -151,7 +152,8 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </a>
+            </div>
             <% }); %>
         </div>
     </div>
@@ -161,6 +163,24 @@
     <div class="container has-text-centered">
         <h1 class="title">DIY Projects</h1>
         <div class="columns">
+            <% diyProjects.forEach(function(project) { %>
+                <div class="column">
+                    <a href="<%= project['link'] %>">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-1by1">
+                                    <img src="<%= project['img'].src %>" alt="<%= project['img'].alt %>">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title">
+                                    <%= project['title'] %>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <% }); %>
         </div>
     </div>
 </section>
