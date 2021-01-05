@@ -1,0 +1,109 @@
+{
+  "experience": [
+    [
+      {
+        "employer": "Arizona State University UASP",
+        "date": "August 2018 - Present",
+        "title": "Subject Area Tutor"
+      }
+    ],
+    [
+      {
+        "employer": "Viasat",
+        "date": "May 2019 - August 2019",
+        "title": "IT Software Engineering Intern"
+      },
+      {
+        "employer": "Viasat",
+        "date": "May 2020 - August 2020",
+        "title": "IT Software Engineering Intern"
+      }
+    ]
+  ],
+  "software-projects": [
+    {
+      "title": "RosalinaBot",
+      "link": "",
+      "img": {
+        "src": "/images/rosalina-bot.jpg",
+        "alt": "RosalinaBot Icon"
+      }
+    },
+    {
+      "title": "Akihabara Simulation",
+      "link": "",
+      "img": {
+        "src": "/images/akihabara-simulation.jpg",
+        "alt": "Unity Simulation of Akihabara"
+      }
+    },
+    {
+      "title": "Happy Key",
+      "link": "",
+      "img": {
+        "src": "/images/happy-key.jpg",
+        "alt": "Happy Key Logo"
+      }
+    },
+    {
+      "title": "Portfolio Site",
+      "link": "",
+      "img": {
+        "src": "",
+        "alt": ""
+      }
+    }
+  ],
+  "diy-projects": [
+    {
+      "title": "Starbits Coffee Mug",
+      "link": "",
+      "img": {
+        "src": "/images/starbits-coffee.jpg",
+        "alt": "Starbits Coffee Logo"
+      }
+    },
+    {
+      "title": "amiibo Display",
+      "link": "",
+      "img": {
+        "src": "/images/amiibo-display.jpg",
+        "alt": "amiibo Display"
+      }
+    },
+    {
+      "title": "Robin Player 2 amiibo",
+      "link": "",
+      "img": {
+        "src": "/images/robin-player-2.jpg",
+        "alt": "Robin Player 2 amiibo"
+      }
+    }
+  ],
+  "links": [
+    {
+      "title": "Online s’mores and more: Returning 2020 interns find a changed world",
+      "date": "August 14, 2020",
+      "link": "https://corpblog.viasat.com/viasat-virtual-interns-2/",
+      "publisher": "Inside Viasat"
+    },
+    {
+      "title": "Study Abroad Reflection",
+      "date": "June 30, 2020",
+      "link": "https://engineering.asu.edu/new-study-abroad/alexander-baratti/",
+      "publisher": "Ira A. Fulton Schools of Engineering @ ASU"
+    },
+    {
+      "title": "Career academies offer pathway to the 'real world'",
+      "date": "March 1, 2015",
+      "link": "https://carlsbad.org/Career-academies-offer-pathway-to-the-real-world/",
+      "publisher": "Carlsbad Chamber of Commerce"
+    },
+    {
+      "title": "Wiz kids win big",
+      "date": "November 2, 2011",
+      "link": "https://www.sandiegouniontribune.com/sdut-carlsbad-wiz-kids-win-big-2011nov02-story.html",
+      "publisher": "The San Diego Union Tribune"
+    }
+  ]
+}

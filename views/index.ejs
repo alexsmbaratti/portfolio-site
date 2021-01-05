@@ -11,7 +11,20 @@
 <section class="hero is-medium is-primary is-bold is-fullheight">
     <div class="hero-body">
         <div class="container has-text-centered">
-            <h1 class="title is-1">Hi, I'm Alex!</h1>
+            <h1 class="title is-1">
+                <strong class="typed-text"></strong>
+            </h1>
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                var typed = new Typed(".typed-text", {
+                    strings: ["Hi, I'm Alex!", "Hi, I'm a Software Developer.", "Hi, I'm アレックス！"],
+                    typeSpeed: 50,
+                    backDelay: 1000,
+                    backSpeed: 50,
+                    loop: true
+                });
+            </script>
             <h2 class="subtitle">
                 Welcome to my Portfolio!
             </h2>
@@ -37,73 +50,33 @@
 <section class="section">
     <div class="container">
         <h1 class="title has-text-centered">Experience</h1>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column">
-                                <p class="title has-text-left">
-                                    Arizona State University UASP
-                                </p>
-                            </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    August 2018 - Present
-                                </p>
-                            </div>
-                        </div>
-                        <p class="subtitle">
-                            Subject Area Tutor
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column">
-                                <p class="title has-text-left">
-                                    Viasat
-                                </p>
-                            </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    May 2019 - August 2019
+        <% experience.forEach(function(row) { %>
+            <div class="columns">
+                <% row.forEach(function(job) { %>
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <p class="title has-text-left">
+                                            <%= job['title'] %>
+                                        </p>
+                                    </div>
+                                    <div class="column">
+                                        <p class="subtitle has-text-right">
+                                            <%= job['date'] %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="subtitle">
+                                    <%= job['employer'] %>
                                 </p>
                             </div>
                         </div>
-                        <p class="subtitle">
-                            IT Software Engineering Intern
-                        </p>
                     </div>
-                </div>
+                <% }) %>
             </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column">
-                                <p class="title has-text-left">
-                                    Viasat
-                                </p>
-                            </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    May 2020 - August 2020
-                                </p>
-                            </div>
-                        </div>
-                        <p class="subtitle">
-                            IT Software Engineering Intern
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <% }) %>
     </div>
 </section>
 
@@ -137,48 +110,24 @@
     <div class="container has-text-centered">
         <h1 class="title">Software Projects</h1>
         <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-1by1">
-                            <img src="/images/rosalina-bot.jpg" alt="RosalinaBot Icon">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title">
-                            RosalinaBot
-                        </p>
-                    </div>
+            <% softwareProjects.forEach(function(project) { %>
+                <div class="column">
+                    <a href="<%= project['link'] %>">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-1by1">
+                                    <img src="<%= project['img'].src %>" alt="<%= project['img'].alt %>">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title">
+                                    <%= project['title'] %>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-1by1">
-                            <img src="/images/akihabara-simulation.jpg" alt="Unity Simulation of Akihabara">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title">
-                            Akihabara Simulation
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-1by1">
-                            <img src="/images/happy-key.jpg" alt="Happy Key Logo">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title">
-                            Happy Key
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <% }); %>
         </div>
     </div>
 </section>
@@ -187,48 +136,24 @@
     <div class="container has-text-centered">
         <h1 class="title">DIY Projects</h1>
         <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-1by1">
-                            <img src="/images/starbits-coffee.jpg" alt="Starbits Coffee Logo">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title">
-                            Starbits Coffee Mug
-                        </p>
-                    </div>
+            <% diyProjects.forEach(function(project) { %>
+                <div class="column">
+                    <a href="<%= project['link'] %>">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-1by1">
+                                    <img src="<%= project['img'].src %>" alt="<%= project['img'].alt %>">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title">
+                                    <%= project['title'] %>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-1by1">
-                            <img src="/images/amiibo-display.jpg" alt="amiibo Display">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title">
-                            amiibo Display
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-1by1">
-                            <img src="/images/robin-player-2.jpg" alt="Robin Player 2 amiibo">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title">
-                            Robin Player 2 amiibo
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <% }); %>
         </div>
     </div>
 </section>
@@ -236,106 +161,33 @@
 <section class="section">
     <div class="container has-text-centered">
         <h1 class="title">Other Links</h1>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column is-four-fifths">
-                                <a href="https://corpblog.viasat.com/viasat-virtual-interns-2/">
-                                    <p class="title has-text-left">
-                                        Online s’mores and more: Returning 2020 interns find a changed world
+        <% links.forEach(function(link) { %>
+            <div class="columns">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="columns">
+                                <div class="column is-four-fifths">
+                                    <a href="<%= link['link'] %>">
+                                        <p class="title has-text-left">
+                                            <%= link['title'] %>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <p class="subtitle has-text-right">
+                                        <%= link['date'] %>
                                     </p>
-                                </a>
+                                </div>
                             </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    August 14, 2020
-                                </p>
-                            </div>
+                            <p class="subtitle has-text-left">
+                                <%= link['publisher'] %>
+                            </p>
                         </div>
-                        <p class="subtitle has-text-left">
-                            Inside Viasat
-                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column is-four-fifths">
-                                <a href="https://engineering.asu.edu/new-study-abroad/alexander-baratti/">
-                                    <p class="title has-text-left">
-                                        Study Abroad Reflection
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    June 30, 2020
-                                </p>
-                            </div>
-                        </div>
-                        <p class="subtitle has-text-left">
-                            Ira A. Fulton Schools of Engineering @ ASU
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column is-four-fifths">
-                                <a href="https://carlsbad.org/Career-academies-offer-pathway-to-the-real-world/">
-                                    <p class="title has-text-left">
-                                        Career academies offer pathway to the ‘real world’
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    March 1, 2015
-                                </p>
-                            </div>
-                        </div>
-                        <p class="subtitle has-text-left">
-                            Carlsbad Chamber of Commerce
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column is-four-fifths">
-                                <a href="https://www.sandiegouniontribune.com/sdut-carlsbad-wiz-kids-win-big-2011nov02-story.html">
-                                    <p class="title has-text-left">
-                                        Wiz kids win big
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="column">
-                                <p class="subtitle has-text-right">
-                                    November 2, 2011
-                                </p>
-                            </div>
-                        </div>
-                        <p class="subtitle has-text-left">
-                            The San Diego Union Tribune
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <% }); %>
     </div>
 </section>
 </body>

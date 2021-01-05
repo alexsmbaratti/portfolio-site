@@ -1,0 +1,576 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "experience": [
+        [
+          {
+            "employer": "Acme Inc.",
+            "date": "January 1970 - Present",
+            "title": "Salesperson"
+          },
+          {
+            "employer": "Acme Inc.",
+            "date": "January 1970 - Present",
+            "title": "Salesperson"
+          },
+          {
+            "employer": "Acme Inc.",
+            "date": "January 1970 - Present",
+            "title": "Salesperson"
+          }
+        ],
+        [
+          {
+            "employer": "Second Row Incorporated",
+            "date": "January 1970 - Present",
+            "title": "Salesperson"
+          }
+        ]
+      ],
+      "software-projects": [
+        {
+          "title": "Hello World",
+          "link": "/hello-world",
+          "img": {
+            "src": "/images/hello-world.jpg",
+            "alt": "Hello World Logo"
+          }
+        }
+      ],
+      "diy-projects": [
+        {
+          "title": "DIY Project",
+          "link": "/diy-project",
+          "img": {
+            "src": "/images/diy-project.jpg",
+            "alt": "DIY Project Logo"
+          }
+        }
+      ],
+      "links": [
+        {
+          "title": "News Headline",
+          "date": "January 1, 1970",
+          "link": "/some-news-link",
+          "publisher": "News Publisher"
+        }
+      ]
+    }
+  ],
+  "required": [
+    "experience",
+    "software-projects",
+    "diy-projects",
+    "links"
+  ],
+  "properties": {
+    "experience": {
+      "$id": "#/properties/experience",
+      "type": "array",
+      "title": "The experience schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          [
+            {
+              "employer": "Acme Inc.",
+              "date": "January 1970 - Present",
+              "title": "Salesperson"
+            },
+            {
+              "employer": "Acme Inc.",
+              "date": "January 1970 - Present",
+              "title": "Salesperson"
+            },
+            {
+              "employer": "Acme Inc.",
+              "date": "January 1970 - Present",
+              "title": "Salesperson"
+            }
+          ],
+          [
+            {
+              "employer": "Second Row Incorporated",
+              "date": "January 1970 - Present",
+              "title": "Salesperson"
+            }
+          ]
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/experience/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/experience/items/anyOf/0",
+            "type": "array",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+              [
+                {
+                  "employer": "Acme Inc.",
+                  "date": "January 1970 - Present",
+                  "title": "Salesperson"
+                },
+                {
+                  "employer": "Acme Inc.",
+                  "date": "January 1970 - Present",
+                  "title": "Salesperson"
+                }
+              ]
+            ],
+            "additionalItems": true,
+            "items": {
+              "$id": "#/properties/experience/items/anyOf/0/items",
+              "anyOf": [
+                {
+                  "$id": "#/properties/experience/items/anyOf/0/items/anyOf/0",
+                  "type": "object",
+                  "title": "The first anyOf schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": {},
+                  "examples": [
+                    {
+                      "employer": "Acme Inc.",
+                      "date": "January 1970 - Present",
+                      "title": "Salesperson"
+                    }
+                  ],
+                  "required": [
+                    "employer",
+                    "date",
+                    "title"
+                  ],
+                  "properties": {
+                    "employer": {
+                      "$id": "#/properties/experience/items/anyOf/0/items/anyOf/0/properties/employer",
+                      "type": "string",
+                      "title": "The employer schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "Acme Inc."
+                      ]
+                    },
+                    "date": {
+                      "$id": "#/properties/experience/items/anyOf/0/items/anyOf/0/properties/date",
+                      "type": "string",
+                      "title": "The date schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "January 1970 - Present"
+                      ]
+                    },
+                    "title": {
+                      "$id": "#/properties/experience/items/anyOf/0/items/anyOf/0/properties/title",
+                      "type": "string",
+                      "title": "The title schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "Salesperson"
+                      ]
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              ]
+            }
+          },
+          {
+            "$id": "#/properties/experience/items/anyOf/1",
+            "type": "array",
+            "title": "The second anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+              [
+                {
+                  "employer": "Second Row Incorporated",
+                  "date": "January 1970 - Present",
+                  "title": "Salesperson"
+                }
+              ]
+            ],
+            "additionalItems": true,
+            "items": {
+              "$id": "#/properties/experience/items/anyOf/1/items",
+              "anyOf": [
+                {
+                  "$id": "#/properties/experience/items/anyOf/1/items/anyOf/0",
+                  "type": "object",
+                  "title": "The first anyOf schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": {},
+                  "examples": [
+                    {
+                      "employer": "Second Row Incorporated",
+                      "date": "January 1970 - Present",
+                      "title": "Salesperson"
+                    }
+                  ],
+                  "required": [
+                    "employer",
+                    "date",
+                    "title"
+                  ],
+                  "properties": {
+                    "employer": {
+                      "$id": "#/properties/experience/items/anyOf/1/items/anyOf/0/properties/employer",
+                      "type": "string",
+                      "title": "The employer schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "Second Row Incorporated"
+                      ]
+                    },
+                    "date": {
+                      "$id": "#/properties/experience/items/anyOf/1/items/anyOf/0/properties/date",
+                      "type": "string",
+                      "title": "The date schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "January 1970 - Present"
+                      ]
+                    },
+                    "title": {
+                      "$id": "#/properties/experience/items/anyOf/1/items/anyOf/0/properties/title",
+                      "type": "string",
+                      "title": "The title schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "Salesperson"
+                      ]
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "software-projects": {
+      "$id": "#/properties/software-projects",
+      "type": "array",
+      "title": "The software-projects schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "title": "Hello World",
+            "link": "/hello-world",
+            "img": {
+              "src": "/images/hello-world.jpg",
+              "alt": "Hello World Logo"
+            }
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/software-projects/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/software-projects/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "title": "Hello World",
+                "link": "/hello-world",
+                "img": {
+                  "src": "/images/hello-world.jpg",
+                  "alt": "Hello World Logo"
+                }
+              }
+            ],
+            "required": [
+              "title",
+              "link",
+              "img"
+            ],
+            "properties": {
+              "title": {
+                "$id": "#/properties/software-projects/items/anyOf/0/properties/title",
+                "type": "string",
+                "title": "The title schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "Hello World"
+                ]
+              },
+              "link": {
+                "$id": "#/properties/software-projects/items/anyOf/0/properties/link",
+                "type": "string",
+                "title": "The link schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "/hello-world"
+                ]
+              },
+              "img": {
+                "$id": "#/properties/software-projects/items/anyOf/0/properties/img",
+                "type": "object",
+                "title": "The img schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "src": "/images/hello-world.jpg",
+                    "alt": "Hello World Logo"
+                  }
+                ],
+                "required": [
+                  "src",
+                  "alt"
+                ],
+                "properties": {
+                  "src": {
+                    "$id": "#/properties/software-projects/items/anyOf/0/properties/img/properties/src",
+                    "type": "string",
+                    "title": "The src schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "/images/hello-world.jpg"
+                    ]
+                  },
+                  "alt": {
+                    "$id": "#/properties/software-projects/items/anyOf/0/properties/img/properties/alt",
+                    "type": "string",
+                    "title": "The alt schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "Hello World Logo"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "diy-projects": {
+      "$id": "#/properties/diy-projects",
+      "type": "array",
+      "title": "The diy-projects schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "title": "DIY Project",
+            "link": "/diy-project",
+            "img": {
+              "src": "/images/diy-project.jpg",
+              "alt": "DIY Project Logo"
+            }
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/diy-projects/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/diy-projects/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "title": "DIY Project",
+                "link": "/diy-project",
+                "img": {
+                  "src": "/images/diy-project.jpg",
+                  "alt": "DIY Project Logo"
+                }
+              }
+            ],
+            "required": [
+              "title",
+              "link",
+              "img"
+            ],
+            "properties": {
+              "title": {
+                "$id": "#/properties/diy-projects/items/anyOf/0/properties/title",
+                "type": "string",
+                "title": "The title schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "DIY Project"
+                ]
+              },
+              "link": {
+                "$id": "#/properties/diy-projects/items/anyOf/0/properties/link",
+                "type": "string",
+                "title": "The link schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "/diy-project"
+                ]
+              },
+              "img": {
+                "$id": "#/properties/diy-projects/items/anyOf/0/properties/img",
+                "type": "object",
+                "title": "The img schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "src": "/images/diy-project.jpg",
+                    "alt": "DIY Project Logo"
+                  }
+                ],
+                "required": [
+                  "src",
+                  "alt"
+                ],
+                "properties": {
+                  "src": {
+                    "$id": "#/properties/diy-projects/items/anyOf/0/properties/img/properties/src",
+                    "type": "string",
+                    "title": "The src schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "/images/diy-project.jpg"
+                    ]
+                  },
+                  "alt": {
+                    "$id": "#/properties/diy-projects/items/anyOf/0/properties/img/properties/alt",
+                    "type": "string",
+                    "title": "The alt schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "DIY Project Logo"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "links": {
+      "$id": "#/properties/links",
+      "type": "array",
+      "title": "The links schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "title": "News Headline",
+            "date": "January 1, 1970",
+            "link": "/some-news-link",
+            "publisher": "News Publisher"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/links/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/links/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "title": "News Headline",
+                "date": "January 1, 1970",
+                "link": "/some-news-link",
+                "publisher": "News Publisher"
+              }
+            ],
+            "required": [
+              "title",
+              "date",
+              "link",
+              "publisher"
+            ],
+            "properties": {
+              "title": {
+                "$id": "#/properties/links/items/anyOf/0/properties/title",
+                "type": "string",
+                "title": "The title schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "News Headline"
+                ]
+              },
+              "date": {
+                "$id": "#/properties/links/items/anyOf/0/properties/date",
+                "type": "string",
+                "title": "The date schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "January 1, 1970"
+                ]
+              },
+              "link": {
+                "$id": "#/properties/links/items/anyOf/0/properties/link",
+                "type": "string",
+                "title": "The link schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "/some-news-link"
+                ]
+              },
+              "publisher": {
+                "$id": "#/properties/links/items/anyOf/0/properties/publisher",
+                "type": "string",
+                "title": "The publisher schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "News Publisher"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}
