@@ -23,7 +23,7 @@
   "software-projects": [
     {
       "title": "RosalinaBot",
-      "link": "",
+      "link": "/rosalina-bot",
       "img": {
         "src": "/images/rosalina-bot.jpg",
         "alt": "RosalinaBot Icon"
@@ -31,7 +31,7 @@
     },
     {
       "title": "Akihabara Simulation",
-      "link": "",
+      "link": "/akihabara-simulation",
       "img": {
         "src": "/images/akihabara-simulation.jpg",
         "alt": "Unity Simulation of Akihabara"
@@ -39,7 +39,7 @@
     },
     {
       "title": "Happy Key",
-      "link": "",
+      "link": "/happy-key",
       "img": {
         "src": "/images/happy-key.jpg",
         "alt": "Happy Key Logo"
@@ -47,7 +47,7 @@
     },
     {
       "title": "Portfolio Site",
-      "link": "",
+      "link": "/portfolio-site",
       "img": {
         "src": "",
         "alt": ""
@@ -57,7 +57,7 @@
   "diy-projects": [
     {
       "title": "Starbits Coffee Mug",
-      "link": "",
+      "link": "/starbits-coffee",
       "img": {
         "src": "/images/starbits-coffee.jpg",
         "alt": "Starbits Coffee Logo"
@@ -73,7 +73,7 @@
     },
     {
       "title": "Robin Player 2 amiibo",
-      "link": "",
+      "link": "/robin-amiibo",
       "img": {
         "src": "/images/robin-player-2.jpg",
         "alt": "Robin Player 2 amiibo"
