@@ -16,62 +16,7 @@
 </head>
 
 <body>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item">
-                Home
-            </a>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                    Software Projects
-                </a>
-
-                <div class="navbar-dropdown">
-                    <% softwareProjects.forEach(function(project) { %>
-                        <a href="<%= project['link'] %>" class="navbar-item">
-                            <%= project['title'] %>
-                        </a>
-                    <% }) %>
-                </div>
-            </div>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                    DIY Projects
-                </a>
-
-                <div class="navbar-dropdown">
-                    <% diyProjects.forEach(function(project) { %>
-                        <a href="<%= project['link'] %>" class="navbar-item">
-                            <%= project['title'] %>
-                        </a>
-                    <% }) %>
-                </div>
-            </div>
-        </div>
-
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button is-primary">
-                        <strong>Contact</strong>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
-<section class="hero is-medium is-primary is-bold is-fullheight-with-navbar">
+<section class="hero is-medium is-primary is-bold is-fullheight">
     <div class="hero-body">
         <div class="container has-text-centered">
             <h1 class="title is-3">
@@ -150,9 +95,20 @@
             <div class="column">
                 <div class="card">
                     <div class="card-content">
-                        <p class="title">
-                            Arizona State University
-                        </p>
+                        <div class="columns">
+                            <div class="column">
+                            </div>
+                            <div class="column">
+                                <p class="title">
+                                    Arizona State University
+                                </p>
+                            </div>
+                            <div class="column">
+                                <p class="subtitle has-text-right has-text-centered-mobile has-text-weight-bold has-text-primary">
+                                    Expected Graduation May 2021
+                                </p>
+                            </div>
+                        </div>
                         <p class="subtitle">
                             Pursuing a Bachelor of Science in Software Engineering
                         </p>
