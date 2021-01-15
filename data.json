@@ -44,14 +44,6 @@
         "src": "/images/happy-key.jpg",
         "alt": "Happy Key Logo"
       }
-    },
-    {
-      "title": "Portfolio Site",
-      "link": "/portfolio-site",
-      "img": {
-        "src": "/images/portfolio-site.jpg",
-        "alt": "Portfolio Site Logo"
-      }
     }
   ],
   "diy-projects": [
