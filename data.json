@@ -49,8 +49,8 @@
       "title": "Portfolio Site",
       "link": "/portfolio-site",
       "img": {
-        "src": "",
-        "alt": ""
+        "src": "/images/portfolio-site.jpg",
+        "alt": "Portfolio Site Logo"
       }
     }
   ],
