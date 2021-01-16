@@ -54,7 +54,8 @@
                 Implementation
             </h1>
             <h2 class="subtitle">
-                To apply the concepts that I've learned, I've made the site dynamic rather than static.
+                To apply the concepts that I've learned, I used Node.js for serving dynamic pages on the back end, and
+                Bulma for designing the front end.
             </h2>
         </div>
     </div>
@@ -65,7 +66,7 @@
         <div class="tile is-parent is-vertical">
             <article class="tile is-child notification is-primary">
                 <p class="title">CSS Framework from Bulma</p>
-                <p class="subtitle">Top tile</p>
+                <p class="subtitle">Bulma provides beautiful web elements that are surprisingly simple to implement.</p>
                 <span class="icon is-large"><i class="fab fa-css3-alt fa-3x"></i></span>
             </article>
             <article class="tile is-child notification is-dark">
@@ -111,10 +112,27 @@
                 Deployment
             </h1>
             <h2 class="subtitle">
-                To publish this site, AWS was used.
+                When determining how to publish this site, I wanted to pick services that would teach me the most. I
+                also wanted options that were relatively cheap and easy to setup and maintain.
             </h2>
         </div>
     </div>
 </section>
+
+<div class="container">
+    <div class="tile">
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-warning">
+                <p class="title">Hosted by AWS Lightsail</p>
+                <p class="subtitle">
+                    AWS Lightsail hosts this site through a combination of Node.js and Apache. Lightsail provided
+                    relatively simple setup with template instances for Node.js. It did need some tweaking to get an
+                    Express.js application working properly, but it got the job done.
+                </p>
+                <span class="icon is-large"><i class="fab fa-aws fa-3x"></i></span>
+            </article>
+        </div>
+    </div>
+</div>
 
 </body>
