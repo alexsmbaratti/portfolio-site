@@ -8,6 +8,55 @@
 </head>
 
 <body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a href="/" class="navbar-item">
+                Home
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Software Projects
+                </a>
+
+                <div class="navbar-dropdown">
+                    <% softwareProjects.forEach(function(project) { %>
+                        <a href="<%= project['link'] %>" class="navbar-item">
+                            <%= project['title'] %>
+                        </a>
+                    <% }) %>
+                    <hr class="navbar-divider">
+                    <a href="/portfolio-site" class="navbar-item">
+                        Portfolio Site
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    DIY Projects
+                </a>
+
+                <div class="navbar-dropdown">
+                    <% diyProjects.forEach(function(project) { %>
+                        <a href="<%= project['link'] %>" class="navbar-item">
+                            <%= project['title'] %>
+                        </a>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
 <section class="hero is-medium is-info is-bold is-large">
     <div class="hero-body">
         <div class="container has-text-centered">
@@ -208,5 +257,12 @@
         </div>
     </div>
 </section>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            Designed by Alex Baratti in California and Arizona.
+        </p>
+    </div>
+</footer>
 </body>
 </html>
