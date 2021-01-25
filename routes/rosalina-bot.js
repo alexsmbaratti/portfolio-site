@@ -4,11 +4,11 @@ var fs = require('fs');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    var json = JSON.parse(fs.readFileSync('./data.json', 'utf8'))
-    var experience = json['experience']
-    var softwareProjects = json['software-projects']
-    var diyProjects = json['diy-projects']
-    var links = json['links']
+    let json = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+    let experience = json['experience'];
+    let softwareProjects = json['software-projects'];
+    let diyProjects = json['diy-projects'];
+    let links = json['links'];
 
     res.render('rosalina-bot', {
         title: 'RosalinaBot',

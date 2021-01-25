@@ -12,6 +12,7 @@ var happyKeyRouter = require('./routes/happy-key');
 var portfolioSiteRouter = require('./routes/portfolio-site');
 var starbitsCoffeeRouter = require('./routes/starbits-coffee');
 var robinRouter = require('./routes/robin-amiibo');
+var starbitRouter = require('./routes/starbit');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use('/happy-key', happyKeyRouter);
 app.use('/portfolio-site', portfolioSiteRouter);
 app.use('/starbits-coffee', starbitsCoffeeRouter);
 app.use('/robin-amiibo', robinRouter);
+app.use('/starbit', starbitRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
