@@ -10,7 +10,7 @@ router.get('/', function (req, res, next) {
     let diyProjects = json['diy-projects'];
     let links = json['links'];
 
-    res.render('under-construction', {
+    res.render('starbit', {
         title: 'Alex Baratti',
         experience: experience,
         softwareProjects: softwareProjects,

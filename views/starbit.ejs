@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css'>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a href="/" class="navbar-item">
+                Home
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Software Projects
+                </a>
+
+                <div class="navbar-dropdown">
+                    <% softwareProjects.forEach(function(project) { %>
+                        <a href="<%= project['link'] %>" class="navbar-item">
+                            <%= project['title'] %>
+                        </a>
+                    <% }) %>
+                    <hr class="navbar-divider">
+                    <a href="/portfolio-site" class="navbar-item">
+                        Portfolio Site
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    DIY Projects
+                </a>
+
+                <div class="navbar-dropdown">
+                    <% diyProjects.forEach(function(project) { %>
+                        <a href="<%= project['link'] %>" class="navbar-item">
+                            <%= project['title'] %>
+                        </a>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<section class="hero is-medium is-dark is-bold is-large">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title is-1">Starbit</h1>
+            <h1 class="subtitle is-1">Add sharding and a dashboard to your Discord bot</h1>
+            <button disabled class="button is-light">
+                <span class="icon is-medium">
+                    <i class="fab fa-npm"></i>
+                </span>
+                <span>Coming Soon</span>
+            </button>
+        </div>
+    </div>
+    <div class="hero-foot has-text-centered">
+        <p>Starbit is not affiliated with nor endorsed by Discord in any way.</p>
+        <p></p>
+    </div>
+</section>
+<section class="hero is-medium is-dark">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title has-text-centered">
+                Add a Dashboard to Your Discord Bot
+            </h1>
+            <br>
+            <h1 class="subtitle">
+                Easily check the status of your Discord Bot with Starbit's proprietary frontend. Have quick access to
+                essential information, like guild count, Node.js version, and client ID. Respawn all of your shards with
+                just one button press. And, if you connect your bot's database, get detailed information on bot
+                analytics, like registered users and server growth over time. All of this with just a few lines of code.
+            </h1>
+            <figure class="image">
+                <img src="/images/starbit/dashboard.png">
+            </figure>
+        </div>
+    </div>
+    </div>
+</section>
+<section class="hero is-medium is-dark">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title has-text-centered">
+                Customize to your Needs
+            </h1>
+            <br>
+            <h1 class="subtitle">
+                Change the port and hostname, add your own certificates for HTTPS, or even write your own database
+                driver. Starbit was made to be simple, but flexible, so it does as much, or as little, as you need.
+            </h1>
+            <figure class="image">
+                <img src="/images/starbit/options.png">
+            </figure>
+        </div>
+    </div>
+    </div>
+</section>
+<section class="hero is-medium is-dark">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title has-text-centered">
+                Analytics Powered by Your Existing Database
+            </h1>
+            <br>
+            <h1 class="subtitle">
+                Don't worry about dealing with new technologies just to visualize your analytics. Starbit can optionally
+                create a new collection in your existing database to store and fetch analytics. Use an existing database
+                driver or easily write your own! And your data will be displayed with beautiful charts from <a
+                        href="https://www.chartjs.org">Chart.js</a>.
+            </h1>
+            <div class="card bp-3">
+                <div class="card-content has-background-black-ter">
+                    <canvas id="guilds-chart" width="300" height="100"></canvas>
+                    <script>
+                        let chart = new Chart(document.getElementById('guilds-chart').getContext('2d'), {
+                            type: 'line',
+                            data: {
+                                datasets: [{
+                                    label: 'Guilds Serving',
+                                    backgroundColor: 'rgba(88, 87, 196, .2)',
+                                    borderColor: 'rgb(88, 87, 196)',
+                                    data: [{
+                                        x: new Date(Date.now()),
+                                        y: 300
+                                    }, {
+                                        x: new Date(Date.now() - 16400000),
+                                        y: 302
+                                    }, {
+                                        x: new Date(Date.now() - 26400000),
+                                        y: 310
+                                    }, {
+                                        x: new Date(Date.now() - 36400000),
+                                        y: 312
+                                    }, {
+                                        x: new Date(Date.now() - 46400000),
+                                        y: 322
+                                    }, {
+                                        x: new Date(Date.now() - 56400000),
+                                        y: 315
+                                    }, {
+                                        x: new Date(Date.now() - 66400000),
+                                        y: 300
+                                    }, {
+                                        x: new Date(Date.now() - 76400000),
+                                        y: 298
+                                    }, {
+                                        x: new Date(Date.now() - 86400000),
+                                        y: 275
+                                    }]
+                                }]
+                            },
+                            options: {
+                                legend: {
+                                    display: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Guilds Serving',
+                                    fontColor: 'rgb(255, 255, 255)',
+                                    fontSize: 24
+                                },
+                                animation: {
+                                    tension: {
+                                        duration: 1000,
+                                        easing: 'linear',
+                                        from: 1,
+                                        to: 0,
+                                        loop: true
+                                    }
+                                },
+                                scales: {
+                                    xAxes: [{
+                                        type: 'time',
+                                        distribution: 'linear',
+                                        time: {
+                                            min: Date.now() - 86400000,
+                                            max: Date.now()
+                                        },
+                                        ticks: {
+                                            fontColor: 'rgb(255, 255, 255)'
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true,
+                                            fontColor: 'rgb(255, 255, 255)'
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<section class="hero is-medium is-light is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                Coming Soon...
+            </h1>
+            <br>
+            <h1 class="subtitle">
+                Stay tuned for updates!
+            </h1>
+        </div>
+    </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            Designed by Alex Baratti in California and Arizona.
+        </p>
+    </div>
+</footer>
+</body>

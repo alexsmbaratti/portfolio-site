@@ -22,6 +22,14 @@
   ],
   "software-projects": [
     {
+      "title": "Starbit",
+      "link": "/starbit",
+      "img": {
+        "src": "/images/starbit.jpg",
+        "alt": "Starbit Logo"
+      }
+    },
+    {
       "title": "RosalinaBot",
       "link": "/rosalina-bot",
       "img": {
