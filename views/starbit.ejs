@@ -130,7 +130,7 @@
             </h1>
             <div class="card bp-3">
                 <div class="card-content has-background-black-ter">
-                    <canvas id="guilds-chart" width="300" height="100"></canvas>
+                    <canvas id="guilds-chart" width="500" height="350"></canvas>
                     <script>
                         let chart = new Chart(document.getElementById('guilds-chart').getContext('2d'), {
                             type: 'line',
@@ -170,6 +170,7 @@
                                 }]
                             },
                             options: {
+                                maintainAspectRatio: false,
                                 legend: {
                                     display: false
                                 },
