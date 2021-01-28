@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
     let links = json['links'];
 
     res.render('starbit', {
-        title: 'Alex Baratti',
+        title: 'Starbit',
         experience: experience,
         softwareProjects: softwareProjects,
         diyProjects: diyProjects,
