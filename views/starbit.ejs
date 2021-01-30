@@ -108,9 +108,27 @@
                 Change the port and hostname, add your own certificates for HTTPS, or even write your own database
                 driver. Starbit was made to be simple, but flexible, so it does as much, or as little, as you need.
             </h1>
-            <figure class="image">
-                <img src="/images/starbit/options.png">
-            </figure>
+            <div class="card bp-3">
+                <div class="card-content has-background-black-ter">
+                    <pre class="has-background-black-ter has-text-light">
+const starbit = require('starbit');
+const Discord = require('discord.js');
+const MongoDBDriver = require('starbit/models/MongoDBDriver');
+const config = require('./config.json');
+const fs = require('fs');
+
+var driver = new MongoDBDriver(config.db.uri, config.db.dbName, true, config.db.userCollection);
+
+starbit.start(config.botToken, './bot/bot.js', {
+    hostname: config.hostname,
+    port: config.port,
+    httpsOpts: {key: fs.readFileSync(config.keyPath), cert: fs.readFileSync(config.certificatePath)},
+    discordJSVersion: Discord.version,
+    dbDriver: driver
+});
+                    </pre>
+                </div>
+            </div>
         </div>
     </div>
     </div>
