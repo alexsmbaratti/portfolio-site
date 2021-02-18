@@ -1,0 +1,11 @@
+// node-sass --omit-source-map-url scss/starbit.scss public/stylesheets/starbit.css
+
+@charset "utf-8";
+
+$blue: hsl(241, 48%, 55%);
+$light-blue: hsl(241, 48%, 75%);
+$dark-blue: #31309c;
+
+$primary: $blue;
+
+@import "../node_modules/bulma/bulma.sass";
