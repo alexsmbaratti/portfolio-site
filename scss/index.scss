@@ -1,0 +1,9 @@
+// node-sass --omit-source-map-url scss/index.scss public/stylesheets/index.css
+
+@charset "utf-8";
+
+$blue: #0DDCED;
+
+$primary: $blue;
+
+@import "../node_modules/bulma/bulma.sass";
