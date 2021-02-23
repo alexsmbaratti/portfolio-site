@@ -1,0 +1,25 @@
+// node-sass --omit-source-map-url scss/rosalinabot.scss public/stylesheets/rosalinabot.css
+
+@charset "utf-8";
+
+$light-blue: #9BFEF8;
+$blue: #56EAEA;
+$dark-blue: #19BCBB;
+$darker-blue: #0B9E9D;
+
+$primary: $blue;
+
+$gradient: linear-gradient(141deg, $light-blue 0%, $blue 25%, $dark-blue 80%, $darker-blue 100%);
+
+@import "../node_modules/bulma/bulma.sass";
+
+.hero.is-primary.is-bold {
+  color: rgb(255, 255, 255);
+  background-image: $gradient }
+.hero.is-primary .title {
+  color: rgb(255, 255, 255); }
+.hero.is-primary .subtitle {
+  color: rgb(255, 255, 255); }
+@media screen and (max-width: 768px) {
+  .hero.is-primary.is-bold .navbar-menu {
+    background-image: $gradient } }
