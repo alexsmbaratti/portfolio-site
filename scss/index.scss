@@ -4,6 +4,8 @@
 
 $blue: #0DDCED;
 
+$baja-sunset-gradient: linear-gradient(141deg, #0DDCED 0%, #8DC885 71%, #EDD24D 100%);
+
 $primary: $blue;
 
 @import "../node_modules/bulma/sass/utilities/_all.sass";
@@ -16,11 +18,11 @@ $primary: $blue;
 
 .hero.is-primary.is-bold {
   color: rgb(255, 255, 255);
-  background-image: linear-gradient(141deg, #0DDCED 0%, #8DC885 71%, #EDD24D 100%); }
+  background-image: $baja-sunset-gradient }
 .hero.is-primary .title {
   color: rgb(255, 255, 255); }
 .hero.is-primary .subtitle {
   color: rgb(255, 255, 255); }
 @media screen and (max-width: 768px) {
   .hero.is-primary.is-bold .navbar-menu {
-    background-image: linear-gradient(141deg, #EDD24D 0%, #8DC885 71%, #0DDCED 100%); } }
+    background-image: $baja-sunset-gradient } }
