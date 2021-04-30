@@ -16,13 +16,51 @@ $primary: $blue;
 @import "../node_modules/bulma/sass/helpers/_all.sass";
 @import "../node_modules/bulma/sass/layout/_all.sass";
 
+$light-0: #FFFFFF;
+$light-1: #DEDEDE;
+
+$dark-0: #000000;
+$dark-1: #1A1A1A;
+$dark-2: #2B2B2B;
+$dark-3: #3C3C3C;
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: $dark-1;
+    color: $light-1;
+  }
+  li {
+    color: $light-1;
+  }
+  .title {
+    color: $light-0;
+  }
+  .subtitle {
+    color: $light-1;
+  }
+  .card {
+    background-color: $dark-2;
+  }
+  .footer {
+    background-color: $dark-3;
+  }
+}
+
 .hero.is-primary.is-bold {
   color: rgb(255, 255, 255);
-  background-image: $baja-sunset-gradient }
+  background-image: $baja-sunset-gradient
+}
+
 .hero.is-primary .title {
-  color: rgb(255, 255, 255); }
+  color: rgb(255, 255, 255);
+}
+
 .hero.is-primary .subtitle {
-  color: rgb(255, 255, 255); }
+  color: rgb(255, 255, 255);
+}
+
 @media screen and (max-width: 768px) {
   .hero.is-primary.is-bold .navbar-menu {
-    background-image: $baja-sunset-gradient } }
+    background-image: $baja-sunset-gradient
+  }
+}
