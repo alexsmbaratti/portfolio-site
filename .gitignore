@@ -1,6 +1,4 @@
 .idea/
 node_modules/
 /config.json
-/public/stylesheets/rosalinabot.css
-/public/stylesheets/starbit.css
-/public/stylesheets/index.css
+/public/stylesheets/
