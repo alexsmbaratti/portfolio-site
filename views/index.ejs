@@ -15,7 +15,8 @@
     <meta name="theme-color" content="#ffffff">
 
     <meta property="og:title" content="<%= title %>">
-    <meta property="og:description" content="This is my portfolio website, containing some of my software and DIY projects">
+    <meta property="og:description"
+          content="This is my portfolio website, containing some of my software and DIY projects">
     <meta property="og:image" content="/social_image.png">
     <meta name="twitter:image" content="/social_image.png">
 </head>
@@ -64,33 +65,26 @@
 <section class="section">
     <div class="container">
         <h1 class="title has-text-centered">Experience</h1>
-        <% experience.forEach(function(row) { %>
-            <div class="columns">
+        <div class="timeline is-centered">
+            <header class="timeline-header">
+                <span class="tag is-medium is-primary">Start</span>
+            </header>
+            <% experience.forEach(function(row) { %>
                 <% row.forEach(function(job) { %>
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="columns">
-                                    <div class="column">
-                                        <p class="title has-text-centered-mobile">
-                                            <%= job['title'] %>
-                                        </p>
-                                    </div>
-                                    <div class="column">
-                                        <p class="subtitle has-text-right has-text-centered-mobile has-text-weight-bold has-text-primary">
-                                            <%= job['date'] %>
-                                        </p>
-                                    </div>
-                                </div>
-                                <p class="subtitle has-text-centered-mobile is-italic">
-                                    <%= job['employer'] %>
-                                </p>
-                            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <p class="heading has-text-weight-bold has-text-primary"><%= job['date'] %></p>
+                            <p class="title is-4 has-text-weight-bold"><%= job['title'] %></p>
+                            <p class="subtitle is-5"><%= job['employer'] %></p>
                         </div>
                     </div>
-                <% }) %>
+                <% }); %>
+            <% }); %>
+            <div class="timeline-header">
+                <span class="tag is-medium is-primary">Present</span>
             </div>
-        <% }) %>
+        </div>
     </div>
 </section>
 

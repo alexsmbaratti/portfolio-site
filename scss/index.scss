@@ -16,6 +16,8 @@ $primary: $blue;
 @import "../node_modules/bulma/sass/helpers/_all.sass";
 @import "../node_modules/bulma/sass/layout/_all.sass";
 
+@import '../node_modules/bulma-timeline/src/sass/index.sass';
+
 $light-0: #FFFFFF;
 $light-1: #DEDEDE;
 
