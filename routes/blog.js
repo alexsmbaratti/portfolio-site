@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
     }).then(function (result) {
         console.log(result.data);
         res.render('blog', {
-            title: 'Blog',
+            title: 'Alex\'s Thesis',
             posts: result.data
         });
     });
