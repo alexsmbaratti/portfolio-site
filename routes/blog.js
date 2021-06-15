@@ -17,11 +17,11 @@ router.get('/', function (req, res, next) {
     });
 });
 
-router.get('/:postID', function (req, res, next) {
-    const postID = req.params.postID;
+router.get('/:postSlug', function (req, res, next) {
+    const postSlug = req.params.postSlug;
     axios({
         method: 'get',
-        url: url + '/posts/?filter[p]=' + postID
+        url: url + '/posts/?slug=' + postSlug
     }).then(function (result) {
         console.log(result.data[0]);
         res.render('post', {

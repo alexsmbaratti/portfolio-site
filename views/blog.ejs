@@ -51,7 +51,7 @@
                             <div class="card-content">
                                 <% let date = new Date(Date.parse(post['date'])) %>
                                 <p class="heading has-text-weight-bold has-text-primary"><%= months[date.getMonth()]; %> <%= date.getDate() %>, <%= date.getFullYear() %></p>
-                                <a href="/blog/<%= post['id'] %>">
+                                <a href="/blog/<%= post['slug'] %>">
                                     <p class="title is-4 has-text-weight-bold"><%= post['title']['rendered'] %></p>
                                 </a>
                                 <p class="subtitle is-5"><%- post['excerpt']['rendered'] %></p>
