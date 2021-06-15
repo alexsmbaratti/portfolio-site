@@ -28,9 +28,11 @@
 <section class="hero is-small is-primary is-bold">
     <div class="hero-body">
         <div class="container has-text-centered">
-            <h1 class="title is-3">
-                <%= title %>
-            </h1>
+            <a href="/blog">
+                <h1 class="title is-3">
+                    <%= title %>
+                </h1>
+            </a>
         </div>
     </div>
 </section>
@@ -40,7 +42,7 @@
         <div class="tile is-ancestor">
             <div class="tile is-parent is-vertical">
                 <article class="tile is-child box">
-                    <p class="title is-3"><%= post['title']['rendered'] %></p>
+                    <p class="title is-3"><%- post['title']['rendered'] %></p>
                     <% let date = new Date(Date.parse(post['date'])) %>
                     <p class="subtitle is-6"><%= months[date.getMonth()]; %> <%= date.getDate() %>, <%= date.getFullYear() %></p>
                     <p><%- post['content']['rendered'] %></p>

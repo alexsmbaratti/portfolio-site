@@ -21,7 +21,7 @@ router.get('/:postSlug', function (req, res, next) {
     const postSlug = req.params.postSlug;
     axios({
         method: 'get',
-        url: url + '/posts/?slug=' + postSlug
+        url: url + '/posts/?slug=' + encodeURI(postSlug)
     }).then(function (result) {
         console.log(result.data[0]);
         res.render('post', {
