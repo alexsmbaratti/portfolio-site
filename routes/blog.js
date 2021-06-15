@@ -11,8 +11,22 @@ router.get('/', function (req, res, next) {
     }).then(function (result) {
         console.log(result.data);
         res.render('blog', {
-            title: 'Alex\'s Thesis',
+            title: 'Alex\'s Ponderings',
             posts: result.data
+        });
+    });
+});
+
+router.get('/:postID', function (req, res, next) {
+    const postID = req.params.postID;
+    axios({
+        method: 'get',
+        url: url + '/posts/?filter[p]=' + postID
+    }).then(function (result) {
+        console.log(result.data[0]);
+        res.render('post', {
+            title: 'Alex\'s Ponderings',
+            post: result.data[0]
         });
     });
 });
