@@ -3,6 +3,8 @@ var router = express.Router();
 const axios = require('axios');
 const url = require('../config.json').url;
 
+const blogTitle = 'Alex\'s Ponderings';
+
 /* GET home page. */
 router.get('/', function (req, res, next) {
     axios({
@@ -11,7 +13,7 @@ router.get('/', function (req, res, next) {
     }).then(function (result) {
         console.log(result.data);
         res.render('blog', {
-            title: 'Alex\'s Ponderings',
+            title: blogTitle,
             posts: result.data
         });
     });
@@ -27,6 +29,11 @@ router.get('/:postSlug', function (req, res, next) {
         res.render('post', {
             title: 'Alex\'s Ponderings',
             post: result.data[0]
+        });
+    }).catch(err => {
+        res.render('error', {
+            message: 'Page not found!',
+            error: err
         });
     });
 });
