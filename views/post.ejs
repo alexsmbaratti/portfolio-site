@@ -15,9 +15,8 @@
     <meta name="msapplication-TileColor" content="#22f7c7">
     <meta name="theme-color" content="#ffffff">
 
-    <meta property="og:title" content="<%= title %>">
-    <meta property="og:description"
-          content="This is my portfolio website, containing some of my software and DIY projects">
+    <meta property="og:title" content="<%- post['title']['rendered'] %>">
+    <meta property="og:description" content="<%- post['excerpt']['rendered'] %>">
     <meta property="og:image" content="/social_image.png">
     <meta name="twitter:image" content="/social_image.png">
     <% const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; %>
@@ -43,6 +42,7 @@
             <div class="tile is-parent is-vertical">
                 <article class="tile is-child box">
                     <p class="title is-3"><%- post['title']['rendered'] %></p>
+                    <p class="subtitle is-5">By Alex Baratti</p>
                     <% let date = new Date(Date.parse(post['date'])) %>
                     <p class="subtitle is-6"><%= months[date.getMonth()]; %> <%= date.getDate() %>, <%= date.getFullYear() %></p>
                     <p><%- post['content']['rendered'] %></p>
