@@ -27,6 +27,14 @@
   ],
   "software-projects": [
     {
+      "title": "Pixel Shelf",
+      "link": "/pixel-shelf",
+      "img": {
+        "src": "/images/pixel-shelf.jpg",
+        "alt": "Pixel Shelf Logo"
+      }
+    },
+    {
       "title": "Starbit",
       "link": "/starbit",
       "img": {

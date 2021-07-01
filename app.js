@@ -13,6 +13,7 @@ var portfolioSiteRouter = require('./routes/portfolio-site');
 var starbitsCoffeeRouter = require('./routes/starbits-coffee');
 var robinRouter = require('./routes/robin-amiibo');
 var starbitRouter = require('./routes/starbit');
+var pixelShelfRouter = require('./routes/pixel-shelf');
 var blogRouter = require('./routes/blog');
 
 var app = express();
@@ -37,6 +38,7 @@ app.use('/portfolio-site', portfolioSiteRouter);
 app.use('/starbits-coffee', starbitsCoffeeRouter);
 app.use('/robin-amiibo', robinRouter);
 app.use('/starbit', starbitRouter);
+app.use('/pixel-shelf', pixelShelfRouter);
 app.use('/blog', blogRouter);
 
 // catch 404 and forward to error handler
