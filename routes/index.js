@@ -20,19 +20,14 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/pixel-shelf', function (req, res, next) {
-    res.statusCode = 503;
-    res.render('under-construction', {
+    res.render('pixel-shelf', {
         title: 'Pixel Shelf'
     });
 });
 
 router.get('/starbit', function (req, res, next) {
     res.render('starbit', {
-        title: 'Starbit',
-        experience: experience,
-        softwareProjects: softwareProjects,
-        diyProjects: diyProjects,
-        links: links
+        title: 'Starbit'
     });
 });
 
