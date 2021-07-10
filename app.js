@@ -5,14 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var amiiboDisplayRouter = require('./routes/amiibo-display');
-var rosalinaBotRouter = require('./routes/rosalina-bot');
-var akihabaraRouter = require('./routes/akihabara-simulation');
-var happyKeyRouter = require('./routes/happy-key');
-var portfolioSiteRouter = require('./routes/portfolio-site');
-var starbitsCoffeeRouter = require('./routes/starbits-coffee');
-var robinRouter = require('./routes/robin-amiibo');
-var starbitRouter = require('./routes/starbit');
+var blogRouter = require('./routes/blog');
 
 var app = express();
 
@@ -28,14 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Controller
 app.use('/', indexRouter);
-app.use('/amiibo-display', amiiboDisplayRouter);
-app.use('/rosalina-bot', rosalinaBotRouter);
-app.use('/akihabara-simulation', akihabaraRouter);
-app.use('/happy-key', happyKeyRouter);
-app.use('/portfolio-site', portfolioSiteRouter);
-app.use('/starbits-coffee', starbitsCoffeeRouter);
-app.use('/robin-amiibo', robinRouter);
-app.use('/starbit', starbitRouter);
+app.use('/blog', blogRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
