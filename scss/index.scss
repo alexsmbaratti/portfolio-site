@@ -26,6 +26,19 @@ $dark-1: #1A1A1A;
 $dark-2: #2B2B2B;
 $dark-3: #3C3C3C;
 
+.hero.is-primary.is-bold {
+  color: rgb(255, 255, 255);
+  background-image: $baja-sunset-gradient
+}
+
+.hero.is-primary .title {
+  color: rgb(255, 255, 255);
+}
+
+.hero.is-primary .subtitle {
+  color: rgb(255, 255, 255);
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background: $dark-1;
@@ -56,19 +69,12 @@ $dark-3: #3C3C3C;
   p {
     color: $light-0;
   }
-}
-
-.hero.is-primary.is-bold {
-  color: rgb(255, 255, 255);
-  background-image: $baja-sunset-gradient
-}
-
-.hero.is-primary .title {
-  color: rgb(255, 255, 255);
-}
-
-.hero.is-primary .subtitle {
-  color: rgb(255, 255, 255);
+  h3 {
+    color: $light-0;
+  }
+  .content h3 {
+    color: $light-0;
+  }
 }
 
 @media screen and (max-width: 768px) {

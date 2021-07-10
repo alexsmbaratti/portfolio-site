@@ -45,7 +45,9 @@
                     <p class="subtitle is-5">By Alex Baratti</p>
                     <% let date = new Date(Date.parse(post['date'])) %>
                     <p class="subtitle is-6"><%= months[date.getMonth()]; %> <%= date.getDate() %>, <%= date.getFullYear() %></p>
-                    <p><%- post['content']['rendered'] %></p>
+                    <div class="content">
+                        <%- post['content']['rendered'] %>
+                    </div>
                 </article>
             </div>
         </div>
