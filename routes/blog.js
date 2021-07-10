@@ -11,7 +11,6 @@ router.get('/', function (req, res, next) {
         method: 'get',
         url: url + '/posts?filter[posts_per_page]=10'
     }).then(function (result) {
-        console.log(result.data);
         res.render('blog', {
             title: blogTitle,
             posts: result.data
@@ -25,7 +24,6 @@ router.get('/:postSlug', function (req, res, next) {
         method: 'get',
         url: url + '/posts/?slug=' + encodeURI(postSlug)
     }).then(function (result) {
-        console.log(result.data[0]);
         res.render('post', {
             title: 'Alex\'s Ponderings',
             post: result.data[0]
