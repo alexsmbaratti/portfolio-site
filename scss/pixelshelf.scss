@@ -1,0 +1,9 @@
+// node-sass --omit-source-map-url scss/pixelshelf.scss public/stylesheets/pixelshelf.css
+
+@charset "utf-8";
+
+$epic-gamer-green: hsl(146, 100%, 39%);
+
+$primary: $epic-gamer-green;
+
+@import "../node_modules/bulma/bulma.sass";
