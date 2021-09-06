@@ -3,7 +3,7 @@
     [
       {
         "employer": "Arizona State University UASP",
-        "date": "August 2018 - Present",
+        "date": "August 2018 - August 2021",
         "title": "Subject Area Tutor"
       }
     ],
@@ -22,6 +22,11 @@
         "employer": "Viasat",
         "date": "May 2021 - August 2021",
         "title": "Software Engineering Intern"
+      },
+      {
+        "employer": "Viasat",
+        "date": "August 2021 - Present",
+        "title": "Software Technician"
       }
     ]
   ],
